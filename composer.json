@@ -1,0 +1,30 @@
+{
+    "name": "tanwencn/laravel-elfinder",
+    "description": "Laravel Elfinder",
+    "type": "library",
+    "keywords": ["laravel", "elfinder"],
+    "homepage": "https://github.com/tanwencn/laravel-elfinder",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tanwen",
+            "email": "361657055@qq.com"
+        }
+    ],
+    "require": {
+        "laravel/framework" : "^5.5",
+        "barryvdh/elfinder-flysystem-driver": "^0.2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tanwencn\\Elfinder\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tanwencn\\Elfinder\\ElfinderServiceProvider"
+            ]
+        }
+    }
+}
