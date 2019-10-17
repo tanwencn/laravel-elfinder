@@ -5,6 +5,7 @@ use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Str;
 use Tanwencn\Elfinder\Interfaces\FinderAuth;
 use Tanwencn\Elfinder\Interfaces\FinderOption;
 
@@ -44,8 +45,8 @@ class Controller extends BaseController
             $option['URL'] = $disk->url($option['path']);
         }
         if(empty($option['tmbPath'])) {
-            $option['tmbPath'] = str_finish($disk->path($option['path']), DIRECTORY_SEPARATOR).'.tmb';
-            $option['tmbURL'] = str_finish($disk->url($option['path']), DIRECTORY_SEPARATOR).'.tmb';
+            $option['tmbPath'] = Str::finish($disk->path($option['path']), DIRECTORY_SEPARATOR).'.tmb';
+            $option['tmbURL'] = Str::finish($disk->url($option['path']), DIRECTORY_SEPARATOR).'.tmb';
         }
 
         $option['attributes'][] = [
