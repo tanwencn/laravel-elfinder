@@ -13,7 +13,7 @@
     ],
     "require": {
         "laravel/framework" : "^6.0",
-        "barryvdh/elfinder-flysystem-driver":"^0.21"
+        "barryvdh/elfinder-flysystem-driver":"^0.2"
     },
     "autoload": {
         "psr-4": {
