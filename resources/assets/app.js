@@ -79,9 +79,9 @@ Finder.disk = function (disk, c) {
     if(typeof c != 'object') c = {};
     if(disk != undefined && disk != null) {
         if (!(disk instanceof Array || disk instanceof Object))
-            c.disk = [disk];
+            c.disks = [disk];
         else
-            c.disk = [disk];
+            c.disks = disk;
     }
 
     return new Finder(c);
