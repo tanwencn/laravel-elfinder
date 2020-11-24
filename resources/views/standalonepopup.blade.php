@@ -1,12 +1,12 @@
 @if(!request()->ajax())
 
     <!-- elfinder -->
-    <link rel="stylesheet" href="http://admin.test/vendor/laravel-elfinder/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="{{ asset('vendor/laravel-elfinder/jquery-ui/jquery-ui.min.css') }}">
     <!-- elfinder -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script src="{{ asset('vendor/laravel-elfinder/jquery.min.js') }}"></script>
     <!-- elfinder -->
     <script src="{{ asset('vendor/laravel-elfinder/jquery-ui/jquery-ui.min.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Studio-42/elFinder@2.1/js/elfinder.min.js"></script>
+    <script src="{{ asset('vendor/laravel-elfinder/elfinder.min.js') }}"></script>
     <!-- elfinder -->
 @endif
 
