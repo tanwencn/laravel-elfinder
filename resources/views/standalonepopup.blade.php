@@ -85,13 +85,19 @@
 
         // opts.getFileCallback = function(){};
         if (typeof Finder !== 'undefined') {
-            opts.getFileCallback = function (file, fm) {
+            opts.getFileCallback = function (file, elFinderInstance) {
                 if (file instanceof Array) {
                     $.each(file, function (i) {
-                        file[i].absoluteUrl = fm.convAbsUrl(file[i].url);
+                        elFinderInstance.openUrl(file.hash, false, function(u){
+                            file[i].absoluteUrl = u;
+                            file.url[i] = u;
+                        });
                     })
                 } else {
-                    file.absoluteUrl = fm.convAbsUrl(file.url);
+                    elFinderInstance.openUrl(file.hash, false, function(u){
+                        file.absoluteUrl = u;
+                        file.url = u;
+                    });
                 }
 
                 Finder.instance("{{ request('j_instance_key') }}").close(file);
@@ -109,4 +115,3 @@
     });
 
 </script>
-
