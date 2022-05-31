@@ -18,7 +18,7 @@
         var opts = {
             //cssAutoLoad : ['/vendor/laravel-elfinder/jquery-ui/themes/base/minified/jquery-ui.min.css'],
             cssAutoLoad: true,
-            baseUrl:'https://cdn.jsdelivr.net/gh/Studio-42/elFinder@2.1/',
+            baseUrl:'https://fastly.jsdelivr.net/gh/Studio-42/elFinder@2.1/',
             commandsOptions: {
                 getfile: {
                     multiple: !!parseInt("{{ $multiple }}"),
@@ -77,7 +77,7 @@
                 _token: '{{ csrf_token() }}'
             },
             url: '{{ route("elfinder.connector") }}',  // connector URL
-            soundPath: 'https://cdn.jsdelivr.net/gh/Studio-42/elFinder@2.1/sounds',
+            soundPath: 'https://fastly.jsdelivr.net/gh/Studio-42/elFinder@2.1/sounds',
             //reloadClearHistory:true,
             useBrowserHistory:false,
             rememberLastDir:false
